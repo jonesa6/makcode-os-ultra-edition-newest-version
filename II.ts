@@ -118,6 +118,12 @@ namespace Apps {
                     home()
                     mouse()
                     sa(false)
+                } else if (game.ask("chrismas")) {
+                    w5 = true
+                    sprites.destroyAllSpritesOfKind(SpriteKind.i)
+                    home()
+                    mouse()
+                    sa(false)
                 }
 
             } else if (game.ask("download section") ) {
