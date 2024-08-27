@@ -1,5 +1,6 @@
- 
-
+##look at the earler versersions at! 
+**https://github.com/jonesa6/TxinkiaOS**
+*and enter
 
 > Open this page at [https://jonesa6.github.io/makecode-arcade-os/](https://jonesa6.github.io/makecode-arcade-os/)
 
