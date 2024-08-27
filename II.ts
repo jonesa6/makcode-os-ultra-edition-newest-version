@@ -57,14 +57,15 @@ namespace Apps {
            // ARRAYTODECODE = MAX(strings.compare(value, USER_INPUT), value) //never use 
             for (let value of serach) {
                 DECODEDSTRING = maxs(strings.compare(value, USER_INPUT), USER_INPUT)
-            }
-            if (DECODEDSTRING == "device min"||"min") {
+            } 
+             if  (DECODEDSTRING == "device min"||"min") {
                 // case hardware min
                 // say hardware min in full screen
                 game.showLongText(hardwaremin, DialogLayout.Full)
-            }
-            if (DECODEDSTRING == "im stuck"||"stuck") {
+            } else if (DECODEDSTRING == "im stuck"||"stuck") {
                 imstuck()
+            } else {
+                game.showLongText("II app does not handle or know what this $" + DECODEDSTRING + "." , DialogLayout.Bottom)
             }
         } else if (ask("exit")) {
             mouse()

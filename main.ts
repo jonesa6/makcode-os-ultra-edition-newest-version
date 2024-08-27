@@ -23,7 +23,7 @@ function greet() {
 }
 //  activate when press A on OS. & interaction
 function press() {
-    if (mySprite2.overlapsWith(mySprite9)) { //run anytime request for run fom User
+    if (mySprite.overlapsWith(mySprite9)) { //run anytime request for run fom User
         Apps.ii()
     }
     //  if allowed to click
@@ -596,7 +596,6 @@ game.onUpdate(function on_on_update4() {
         wrong = false
         askpassword()
         failedtimes++
-
         if (game.ask("forgot passwoord?")) {
             game.showLongText("make sure you write down your password & do not let other people know your password unless you trust them.", DialogLayout.Full)
         }
