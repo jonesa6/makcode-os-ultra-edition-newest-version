@@ -19,7 +19,6 @@ namespace error {
     /**
      * display Error with 1/2 diffrent styles and optional warning outside of console
      */
-    //% block
     export function foo(style: boolean, s: string,saywarning:Boolean): void {
         if (saywarning) {
             game.showLongText("error had happened please read console", DialogLayout.Bottom)
@@ -39,7 +38,6 @@ namespace error {
     /**
          * stop os and display error as if the code had erroed out (great for bad errors)
      */
-    //% block
     export function criticalerror(num:number): any {
      control.panic(num)
     }

@@ -7,7 +7,6 @@ namespace strings {
     let match = 0
     let end = true
 
-    //% block
     export function compare(n: string, s: string,): any {
         // Add code here
         let word1 = n.length
@@ -31,7 +30,6 @@ namespace strings {
      * TODO: describe your function here
      * @param value describe value here, eg: 5
      */
-    //% block
     export function randomchar(): any {
         let text_list = [
             "a",

@@ -8,7 +8,6 @@ namespace Apps {
      * the interactable info or II App (built in)
      * @param e describe parameter here
      */
-    //% block
     export function ii(): void {
         // Add code here
          sa(true)
@@ -83,7 +82,6 @@ namespace Apps {
      * the general store or just store App (built in)
      * @param e describe parameter here
      */
-    //% block
     export function store() {
         //  general store
        
@@ -154,7 +152,6 @@ error.foo(true, "store app did not open (from App)", false)
          * the utils & calculater app (built in)
          * @param e describe parameter here
          */
-    //% block
     export function utils_calculater() {
         //  utils and calculater
         if (mySprite.overlapsWith(mySprite2) || utils&&!inAPP) {
@@ -202,8 +199,7 @@ error.foo(true, "utils_calculater app did not open (from App)", null)
     /**
          * the settings app
          */
-    //% block
-    export function settings() {
+     export function settings() {
         sprites.destroyAllSpritesOfKind(SpriteKind.i)
         if (game.ask("dark mode")) {
             darkmode = true
@@ -223,6 +219,8 @@ error.foo(true, "utils_calculater app did not open (from App)", null)
                 blockSettings.writeNumber("shouldgreet", 1)
                 game.showLongText("os will now greet you when you sign in", DialogLayout.Bottom)
             }
+            mouse()
+            home()
             shouldgreet = greet() //converts  0 or 1 to boolean
         }
 
