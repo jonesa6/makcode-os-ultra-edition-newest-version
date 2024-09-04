@@ -31,7 +31,11 @@ namespace Apps {
         let MAX = 0
         let LASTSTRING = ""
         let lASTMAX = 0
-        function maxs(num: number, text: string) {
+        function maxs(num: number, text: string,s:Array<string>) {
+           strings.compare(text, LASTSTRING) > Math.min(text.length,LASTSTRING.length) / 1.4; return LASTSTRING; //too close to last input return past
+            for (let i = 0; i < s.length-1; i++) {
+                strings.compare(text, LASTSTRING)    < Math.min(text.length, LASTSTRING.length) / 1.4; return LASTSTRING; //too close to last input return past
+            }
             MAX = Math.max(num, MAX)
             if (text != LASTSTRING && MAX != lASTMAX) {
                 LASTSTRING = text
@@ -56,7 +60,7 @@ namespace Apps {
             USER_INPUT = game.askForString("Search")
            // ARRAYTODECODE = MAX(strings.compare(value, USER_INPUT), value) //never use 
             for (let value of serach) {
-                DECODEDSTRING = maxs(strings.compare(value, USER_INPUT), USER_INPUT)
+                DECODEDSTRING = maxs(strings.compare(value, USER_INPUT), USER_INPUT,serach)
             } 
              if  (DECODEDSTRING == "device min"||"min") {
                 // case hardware min
