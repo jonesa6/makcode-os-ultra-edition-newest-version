@@ -19,8 +19,7 @@
         "tutorial-info-cache.json",
         "II.ts",
         "strings.ts",
-        "custom.ts",
-        "target.ts"
+        "custom.ts"
     ],
     "testFiles": [
         "test.ts"
