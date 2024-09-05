@@ -576,7 +576,11 @@ game.onUpdate(function on_on_update3() {
            pause(350)
             home()
         }
-        
+        if (questionforAI == "h" || "help" && strings.compare(questionforAI, "h") == 1 || strings.compare(questionforAI,"help")==4) {
+            if (!utility) { game.showLongText("Error:utility app not installed", DialogLayout.Bottom)} else {
+                           util()
+            }
+        }
     }
     
     //  keep light or dark mode
@@ -612,6 +616,15 @@ game.onUpdate(function on_on_update4() {
     }
     
 })
+function util() {
+if (game.ask("stuck")) { game.showLongText("reset the OS or refresh the page& if that does not help reset the device", DialogLayout.Full) }
+else if (game.ask("how to use math")) {
+    game.showLongText("first open " + "the icon which looks like a lot of colored squares." + "  then press B 3 times to get to use the math A to confirm B to go to next.", DialogLayout.Full)
+} else if (game.ask("how to see version")) {
+    game.showLongText("first open " + "the icon which looks like a lot of colored squares." + "then press B twice then press A once and you will see the version. ", DialogLayout.Full)
+
+}
+}
 //  2 second thingy
 game.onUpdateInterval(2000, function on_update_interval() {
     
