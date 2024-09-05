@@ -493,7 +493,7 @@ let utils = false
 let wtore = false
 let utility = false
 let macros = false
-let versionmessage = "v4.35"
+let versionmessage = "v4.38"
 let hellomessage = "hello User"
 const osname ="makcode Os [ultra edition]"
 blockSettings.writeNumber("password", 1234)
@@ -562,24 +562,26 @@ game.onUpdate(function on_on_update3() {
     //  AI code
     if (AI) {
         questionforAI = game.askForString("AI")
-        if (questionforAI == "joke" || "j" && strings.compare(questionforAI, "joke") == 4 || strings.compare(questionforAI,"j")==1) {
-            game.showLongText(jokelist[randint(0, 4)], DialogLayout.Bottom)
-        }
-        
+       
         if (questionforAI == "v"&&strings.compare(questionforAI,"v")==1) {
             game.showLongText("AI version: 1.0", DialogLayout.Bottom)
         }
+        if (questionforAI ==="joke" || "j" && strings.compare(questionforAI, "joke") ==  4 || strings.compare(questionforAI, "j") == 1) {
+                game.showLongText(jokelist[randint(0, 4)], DialogLayout.Bottom)
+            }
         
-        if (questionforAI == "exit"&&strings.compare(questionforAI,"exit")>3) {
+        
+         
+        }
+    if (questionforAI == "h" || "help" && strings.compare(questionforAI, "h") == 1 || strings.compare(questionforAI, "help") == 4) {
+        if (!utility) { game.showLongText("Error:utility app not installed", DialogLayout.Bottom) } else {
+            util()
+        }
+        if (game.ask("EXIT?")) {
             AI = false
             mouse()
-           pause(350)
+            pause(350)
             home()
-        }
-        if (questionforAI == "h" || "help" && strings.compare(questionforAI, "h") == 1 || strings.compare(questionforAI,"help")==4) {
-            if (!utility) { game.showLongText("Error:utility app not installed", DialogLayout.Bottom)} else {
-                           util()
-            }
         }
     }
     
