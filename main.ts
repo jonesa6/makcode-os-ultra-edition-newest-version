@@ -562,15 +562,15 @@ game.onUpdate(function on_on_update3() {
     //  AI code
     if (AI) {
         questionforAI = game.askForString("AI")
-        if (questionforAI == "joke"||"JOKE"||"Joke") {
+        if (questionforAI == "joke" || "j" && strings.compare(questionforAI, "joke") == 4 || strings.compare(questionforAI,"j")==1) {
             game.showLongText(jokelist[randint(0, 4)], DialogLayout.Bottom)
         }
         
-        if (questionforAI == "V"||"v") {
+        if (questionforAI == "v"&&strings.compare(questionforAI,"v")==1) {
             game.showLongText("AI version: 1.0", DialogLayout.Bottom)
         }
         
-        if (questionforAI == ("Exit")||"exit"||"EXIT") {
+        if (questionforAI == "exit"&&strings.compare(questionforAI,"exit")>3) {
             AI = false
             mouse()
            pause(350)

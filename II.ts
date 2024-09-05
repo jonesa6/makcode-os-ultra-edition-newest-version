@@ -33,7 +33,7 @@ namespace Apps {
         function maxs(num: number, text: string,s:Array<string>) {
            strings.compare(text, LASTSTRING) > Math.min(text.length,LASTSTRING.length) / 1.4; return LASTSTRING; //too close to last input return past
             for (let i = 0; i < s.length-1; i++) {
-                strings.compare(text, LASTSTRING)    < Math.min(text.length, LASTSTRING.length) / 1.4; return LASTSTRING; //too close to last input return past
+                strings.compare(text, LASTSTRING) <  Math.min(text.length, LASTSTRING.length) / 1.4; return LASTSTRING; //too close to last input return past
             }
             MAX = Math.max(num, MAX)
             if (text != LASTSTRING && MAX != lASTMAX) {
@@ -158,10 +158,12 @@ error.foo(true, "store app did not open (from App)", false)
            sa(true)
             sprites.destroyAllSpritesOfKind(SpriteKind.i)
             //  options
+            if (game.ask("open cloud?")) { cloudapp.cloudapp_open() }
          if (game.ask("open settings")) { //basicly opens settings app
-              Apps.settings
+              Apps.settings()
             } else if (game.ask("Os version")) {
                 game.showLongText("version:" + versionmessage + ", v4.2 added version message at startup)"+" " +osname, DialogLayout.Bottom)
+                game.showLongText("#" + osname, DialogLayout.Bottom)
                 mouse()
                 home()
                 sa(false)
