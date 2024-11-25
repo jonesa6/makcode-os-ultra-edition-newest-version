@@ -1,4 +1,4 @@
-// Add your code here
+
 // comparing strings and random char
 //% weight=100 color=#0fbc11 icon=""
 namespace strings {

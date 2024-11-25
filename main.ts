@@ -3,7 +3,7 @@ latest added features:
 interactable info or II app
 latest code changes:
 intead of Apps in main.ts there in II.ts
-v4: added local support for spanish //v4  mostly been reverted
+v4: added local support for spanish //reverted update 4 and 4.1
 v4.1: added more support for spanish
 v4.2:added version message at start
 */
@@ -562,7 +562,6 @@ game.onUpdate(function on_on_update3() {
     //  AI code
     if (AI) {
         questionforAI = game.askForString("AI")
-       
         if (questionforAI == "v"&&strings.compare(questionforAI,"v")==1) {
             game.showLongText("AI version: 1.0", DialogLayout.Bottom)
         }

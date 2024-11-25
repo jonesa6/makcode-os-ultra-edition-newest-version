@@ -86,6 +86,8 @@ namespace Apps {
         //  general store
        
         if (mySprite.overlapsWith(mySprite7) || wtore&&!inAPP) {
+          
+            info.setScore(blockSettings.readNumber("oscoins"))
             sa(true)
             if (game.ask("Auto open") ) {
                 game.showLongText("startup impact: Varies", DialogLayout.Full)
@@ -137,7 +139,13 @@ namespace Apps {
                         utility = true
                     }
 
-                } else {
+                } else if (info.score()>10) {
+
+                    if (game.ask("buy oscoin bank account")) {
+                        
+                    }
+                }  
+                else {
                     return
                     sa(false)
                 }
