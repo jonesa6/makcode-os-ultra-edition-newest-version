@@ -51,7 +51,9 @@ namespace Apps {
         let startupmessage = "the interactable info app (curently in beta)"
         let helpmessage = "enter what info you want into the search option then it will give you a link to the most closetest to your search info text"
         let hardwaremin = "250Kb or 120kb but less somoth of ram & ARM Cortex M microcontroller & 240x220 or 160 by 120 pixel display & single channel sound output & Some way to commission and possibly debug the board or computer "
-        let serach = ["im stuck"||"stuck", "device min"|| "min"]
+        let hypermenu = "link here helpmessage,link here oshelp"
+        let oshelp = "to reach the store select the icon that has store on it,to get to the calculater  select the app that has a bunch of squares and press the b button twice"
+        let serach = ["im stuck"||"stuck", "device min"|| "min"||"menu"]
         
         game.showLongText(startupmessage, DialogLayout.Bottom)
         sprites.destroyAllSpritesOfKind(SpriteKind.i)
@@ -67,9 +69,17 @@ namespace Apps {
                 game.showLongText(hardwaremin, DialogLayout.Full)
             } else if (DECODEDSTRING == "im stuck"||"stuck") {
                 imstuck()
-            } else {
-                game.showLongText("II app does not handle or know what this $" + DECODEDSTRING + "." , DialogLayout.Bottom)
+            } else if ( DECODEDSTRING=="menu"){
+                game.showLongText(hypermenu, DialogLayout.Bottom)
+             if (game.ask("use links?")) {
+    
+            if (game.ask("link to helpmessage?")) {
+                game.showLongText(helpmessage, DialogLayout.Bottom)
+            } else if (game.ask("link to oshelp?")) {
+                
             }
+              }
+             } else { game.showLongText("II app does not handle or know what this $" + DECODEDSTRING + ".", DialogLayout.Bottom)}
         } else if (ask("exit")) {
             mouse()
             home()
@@ -140,9 +150,8 @@ namespace Apps {
                     }
 
                 } else if (info.score()>10) {
-
                     if (game.ask("buy oscoin bank account")) {
-                        
+                        oscoin.addacount()
                     }
                 }  
                 else {
@@ -204,6 +213,10 @@ error.foo(true, "store app did not open (from App)", false)
         } else {
 error.foo(true, "utils_calculater app did not open (from App)", null)
         }
+
+    }
+    export function bank() {
+    
 
     }
     /**

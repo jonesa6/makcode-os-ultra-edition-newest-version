@@ -493,7 +493,7 @@ let utils = false
 let wtore = false
 let utility = false
 let macros = false
-let versionmessage = "v4.38"
+let versionmessage = "v4.39"
 let hellomessage = "hello User"
 const osname ="makcode Os [ultra edition]"
 blockSettings.writeNumber("password", 1234)
@@ -501,10 +501,11 @@ game.showLongText(versionmessage, DialogLayout.Bottom)
 if (shouldgreet) {
     game.showLongText(hellomessage, DialogLayout.Bottom)
 }
-if (blockSettings.readNumber("Mac") == 1) { //keep USER data of downloads
-    macros = true
-}
 
+if (blockSettings.readNumber("Mac") == 1) { //keep USER data of downloads
+    //macros = true
+}
+blockSettings.writeNumber("Mac", 0)
 if (blockSettings.readNumber("util") == 1) {
     utility = true
 }
@@ -515,6 +516,7 @@ if (blockSettings.readNumber("open") == 1) {
     utils = true
 }
 //run on start
+
 backrounddark_or_light_mode()
 stats.turnStats(true)
 //  secure check
@@ -529,17 +531,19 @@ if (!blockSettings.exists("password")) {
     blockSettings.writeNumber("password", ask)
         game.showLongText(" press B when it asks if you want to reset system then enter  3726 for the public-password to be able to enter your password. after you read this ", DialogLayout.Full)
     game.reset()
-} else if (game.askForNumber("public-password") ) {
+} else if (game.askForNumber("public-password")==3726 ) {
     //  ask if you want to reset the system
     if (game.ask("reset system")) {
         //  reset system. [reset OS] if password correct
         if (game.askForNumber("password for reset") == blockSettings.readNumber("password")) {
-            blockSettings.clear()
-            ask = game.askForNumber("password") 
+            ask = game.askForNumber("password")
             blockSettings.writeNumber("password", ask)
-        } else {
-            //  password for reset wrong
+            blockSettings.clear()
+            
             game.reset()
+
+        } else {
+        game.reset()
         }
         
     } else {
