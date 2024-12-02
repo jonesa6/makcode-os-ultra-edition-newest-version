@@ -19,7 +19,6 @@ namespace Apps {
                 game.showLongText("reset the OS but if that does not work then deleting your password if you are stuck signing in then check if your password is null or if your inputing incorret passwords", DialogLayout.Bottom)
             }
         }
-
         function ask(ask2: string) {
             if (game.ask(ask2)) {
                 return true
@@ -54,7 +53,6 @@ namespace Apps {
         let hypermenu = "link here helpmessage,link here oshelp"
         let oshelp = "to reach the store select the icon that has store on it,to get to the calculater  select the app that has a bunch of squares and press the b button twice"
         let serach = ["im stuck"||"stuck", "device min"|| "min"||"menu"]
-        
         game.showLongText(startupmessage, DialogLayout.Bottom)
         sprites.destroyAllSpritesOfKind(SpriteKind.i)
         if (ask("search")) {
@@ -216,8 +214,6 @@ error.foo(true, "utils_calculater app did not open (from App)", null)
 
     }
     export function bank() {
-    
-
     }
     /**
          * the settings app

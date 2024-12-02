@@ -212,7 +212,6 @@ function press() {
         
     }
 }
-
 //  home screen
 function home() {
     os = true
@@ -337,7 +336,6 @@ function home() {
     mySprite9.x = 32
     mySprite9.y = 32
 }
-
 //  ask for password
 function askpassword() {
     pass2 = game.askForNumber("your password")
@@ -501,7 +499,6 @@ game.showLongText(versionmessage, DialogLayout.Bottom)
 if (shouldgreet) {
     game.showLongText(hellomessage, DialogLayout.Bottom)
 }
-
 if (blockSettings.readNumber("Mac") == 1) { //keep USER data of downloads
     //macros = true
 }
@@ -509,14 +506,12 @@ blockSettings.writeNumber("Mac", 0)
 if (blockSettings.readNumber("util") == 1) {
     utility = true
 }
-
 if (blockSettings.readNumber("open") == 1) {
     wtore = true
 } else if (blockSettings.readNumber("open") == 2) {
     utils = true
 }
 //run on start
-
 backrounddark_or_light_mode()
 stats.turnStats(true)
 //  secure check
@@ -554,7 +549,6 @@ if (!blockSettings.exists("password")) {
 } else {
     console.log("wrong public password")
 }
-
 game.onUpdate(function on_on_update() {
     if (wait && !achievements.isShowing()) {
         achievements.create(text_list[text_list.length - 1],200) //display text on end of memory/array
@@ -1417,7 +1411,6 @@ game.onUpdateInterval(100, function on_update_interval4() {
                         ................................................................................................................................................................
         `)
     }
-    
     //  switch between dark and light mode icons
     if (darkmode && mySprite2) {
         mySprite2.setImage(img`
@@ -1638,5 +1631,4 @@ game.onUpdateInterval(100, function on_update_interval4() {
                         1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
         `)
     }
-    
 })

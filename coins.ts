@@ -16,21 +16,9 @@ namespace oscoin {
          this.borrodmoney =+  Math.abs(game.askForNumber("borrow +money"))
      }
  }
-    
     export function addacount() {
         if (ac1=null) {ac1 = new acount} else if (ac2=null) {ac2 = new acount} else if (ac3=null) {ac3 = new acount}
     }
-   export function getacount(num:number                               
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
+   export function getacount(num:number                                  
 ) {}
 }

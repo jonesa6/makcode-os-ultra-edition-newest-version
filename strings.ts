@@ -59,7 +59,6 @@ namespace strings {
             "z"
         ]
         let choice = randint(0, text_list.length - 1)
-
         return text_list[choice]
     }
 
